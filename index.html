@@ -36,5 +36,17 @@
    }
    }
 	</script>
+ <script> 
+ function isIE() { 
+ var userAgent = navigator.userAgent; 
+ var pc = !/android|iphone|linux|micromessenger/i.test(userAgent) 
+ var isIE = /compatible/i.test(userAgent) && /MSIE/i.test(userAgent) 
+ var isIE11 = /Trident/i.test(userAgent) && /rv:11.0/i.test(userAgent) 
+ return Boolean(pc && (isIE || isIE11)) 
+ } 
+ if (isIE()) { 
+ alert('对不起此网站不兼容ie浏览器，请更换浏览器访问。') 
+ } 
+ </script> 
   </body>
 </html>
